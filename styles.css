@@ -121,6 +121,7 @@ p {
 
 /* Footer */
 footer {
+  margin-top: var(--spacing-lg);
   padding: var(--spacing-md) 0;
   text-align: center;
   color: var(--text-secondary);
