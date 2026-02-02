@@ -18,7 +18,7 @@
 
 * {
   box-sizing: border-box;
-  margin: 100;
+  margin: 0;
   padding: 0;
 }
 
@@ -242,26 +242,30 @@ textarea:focus {
   }
 }
 
-/* Profile Section */
-.profile-section {
+/* Hero Section */
+.hero {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
   margin-bottom: var(--spacing-lg);
-  text-align: center;
+}
+
+.hero-content {
+  flex: 1;
 }
 
 .profile-photo-container {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid var(--accent-color);
-  margin-bottom: var(--spacing-sm);
   background-color: var(--surface-color);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .profile-photo {
@@ -278,7 +282,7 @@ textarea:focus {
 .social-links {
   display: flex;
   gap: var(--spacing-md);
-  margin-top: var(--spacing-sm);
+  margin-top: var(--spacing-md);
 }
 
 .social-links a {
@@ -289,4 +293,15 @@ textarea:focus {
 
 .social-links a:hover {
   color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
 }
